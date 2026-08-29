@@ -1,0 +1,14 @@
+[Unit]
+Description=MSI GP66 fan telemetry helper
+After=local-fs.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/msi-gp66-fan-control
+ExecStartPre=/usr/bin/modprobe ec_sys write_support=0
+ExecStart=/usr/local/libexec/msi-gp66-fan-helper serve
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

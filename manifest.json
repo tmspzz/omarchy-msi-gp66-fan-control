@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "msi.gp66-fan-control",
+  "name": "MSI GP66 Fan Control",
+  "version": "0.1.0-beta",
+  "author": "Tommaso Piazza",
+  "license": "MIT",
+  "description": "MSI GP66 MS-1542 EC fan monitoring and Cooler Boost",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "MSI GP66 fans",
+    "description": "Shows MSI GP66 temperatures, fan RPM, and Cooler Boost",
+    "category": "System",
+    "allowMultiple": false
+  }
+}
